@@ -2,25 +2,47 @@
 
 ## Discription
 
-<Discription du projet en quelques phrases>
-<INF3135 Université du Québec à Montréal>
+Ce projet utilise principalement le langage `C` pour calculer des nombres parfaits. Il permet de passer des arguments en ligne de commande avec deux types syntaxes suivants:
+~~~~
+$ ./tp1 -c CODE_permanent -i nom_du_fichier_en_entree.ext -o fichier_sortie.ext
+~~~~
+~~~~
+$ ./tp1 -c CODE_permanent < nom_du_fichier_en_entree.ext > fichier_sortie.ext
+~~~~
+En outre, le projet gère automatiquement les données, les fichiers et les arguments de ligne de commande via `Make` et `Makefile`.
+Les codes sources sont maintenus sur Github.
 
-## Jian Chen
+INF3135 - Construction et maintenance de logiciel en `C` (Université du Québec à Montréal)
 
-<Jian Chen> (<CHEJ19087301>)
+## Auteur
+
+Jian Chen (CHEJ19087301)
 
 ## Fonctionnement
 
-<expliquez brièvement comment faire fonctionner votre projet, en inscrivant au moins deux exemples d'utilisation (commande lancée et résultat affiché>
+Ce projet permet d'exécuter un `C` programme à partir de la ligne de commande pour trouver le nombre parfait et vérifier les arguments de la ligne de commande.  Il gère également automatiquement les données et les fichiers via `C`.
+- Si on lance une commande `./tp1 -c CODE_permanent -i entree.txt -o sortie.txt`, le programme générera automatiquement un fichier `code.txt` contenant le Code Permanent passé par le paramètre `-c` et le fichier `sortie.txt`, qui contient tous les nombres parfaits trouvés en lisant le fichier d'entrée `entree.txt`.
+- Si on exécute la commande `make clean` dans shell, tous les fichiers d'objet `*.o` et le fichier exécutable `tp1` doivent être enlevés.
 
 ## Contenu du projet
 
-<décrivez brièvement chacun des fichiers contenus dans le projet (une phrase par fichier)>
+Ce projet contient principalement les fichiers suivants:
+- Tout les codes sources du `C` programme dans ce projet, ainsi que la fonction `main`, sont inclus dans le fichier `tp1.c`.
+- La description du projet, l'auteur, les fonctionnements, le contenu, les références et l'état sont listés dans le fichier `README.md`.
+- Le code permanent en majuscule provient le contenu du fichier `cp.txt`.
+- Dans ce projet, un fichier `Makefile` est créé pour gérer automatiquement la compilation, le traitement des données et le traitement des fichiers du code source. Il fournit les fonctions suivantes, notamment `make`, `make clean`, `make data`, `make test` et `make resultat`.
+- Un fichier `.gitignore` spécifie les fichiers intentionnellement non suivis que Git doit ignorer, y compris les fichiers d'objet, d'exécution et de package.
 
 ## Références
 
-<Citez vos sources ici>
+Tous les travaux de mon projet sont basés sur les matériaux et les cours suivants, et je remercie pour leurs contributions.
+- [Matériel du cours INF3135 H2019 - Guy Francoeur](https://github.com/guyfrancoeur/INF3135_H2019)
+- [C Programming Language Tutorial - Abhishek Ahlawat](https://www.studytonight.com/c/ "C")
+- [The C Programming Language (Second Edition) - Brian W.Kernighan](https://archive.org/details/CProgrammingLanguage2ndEditionByBrianW.KernighanDennisM.Ritchie/page/n191)
+- [C Tutorial - w3schools.in](https://www.w3schools.in/c-tutorial/ "C Tutorial")
+- [The C Programming Language - TIOBE Graph](https://www.tiobe.com/tiobe-index/c/ "Langage C")
+
 
 ## Statut
 
-<indiquez si le projet est complété ou s'il y a bouges>
+Mon projet a été réalisé et complété conformément aux exigences du TP1.
