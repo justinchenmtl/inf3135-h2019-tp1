@@ -31,15 +31,15 @@ Ce projet contient principalement les fichiers suivants:
 - La description du projet, l'auteur, les fonctionnements, le contenu, les références et l'état sont listés dans le fichier `README.md`.
 - Le code permanent en majuscule provient le contenu du fichier `cp.txt`.
 - Dans ce projet, un fichier `Makefile` est créé pour gérer automatiquement la compilation, le traitement des données et le traitement des fichiers du code source. Il fournit les fonctions suivantes, notamment `make`, `make clean`, `make data`, `make test` et `make resultat`.
+> Dans la fonction de `make test`, il peut tester pour créer le `CODE permanent` lu dans le fichier `cp.txt` par une variable `CP`. De plus, il a été testé pour lire les données d'un fichier `data.txt` dans le répertoire `./data` et afficher le résultat avec les nombres parfaits à l'écran.
 - Un fichier `.gitignore` spécifie les fichiers intentionnellement non suivis que Git doit ignorer, y compris les fichiers d'objet, d'exécution et de package.
 
 ## Références
 
 Tous les travaux de mon projet sont basés sur les matériaux et les cours suivants, et je remercie pour leurs contributions.
-- [Matériel du cours INF3135 H2019 - Guy Francoeur](https://github.com/guyfrancoeur/INF3135_H2019)
 - [C Programming Language Tutorial - Abhishek Ahlawat](https://www.studytonight.com/c/ "C")
 - [The C Programming Language (Second Edition) - Brian W.Kernighan](https://archive.org/details/CProgrammingLanguage2ndEditionByBrianW.KernighanDennisM.Ritchie/page/n191)
-- [C Tutorial - w3schools.in](https://www.w3schools.in/c-tutorial/ "C Tutorial")
+- [Programming in C (UNIX System Calls and Subroutines using C) - A. D. Marshall](https://users.cs.cf.ac.uk/Dave.Marshall/C/CE.html)
 - [The C Programming Language - TIOBE Graph](https://www.tiobe.com/tiobe-index/c/ "Langage C")
 
 

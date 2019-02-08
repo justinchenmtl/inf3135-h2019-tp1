@@ -1,30 +1,39 @@
+// INF-3135 Construction et maintenance de logiciel en C
+// Auteur: Jian Chen
+
+// Librairies
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h> 
- 
+
+// Fonctions main
 int main(int argc, char** argv) {
 
+    // Déclaration des variables
     FILE *entree = NULL;
     FILE *sortie = NULL;
     FILE *code = NULL; 
     int i=0, j=0, min, sum, max, count, tete=0, tail=0;
     count = argc;
 
+    // Validations des arguments
     for(int i = 0; i < count; i++){
+        entree = stdin;
+        sortie = stdout;
+        if(entree == NULL){
+            return 5;
+        }else if(sortie == NULL){
+            return 6;
+        }
         if(count <= 2 || count == 4 || count == 6 || strcmp(argv[1], "-c") != 0){
             fprintf(stderr, "La ligne de commande doit être sous la forme suivante: %s <-c CODEpermanent> [-i fichier.in] [-o fichier.out] \n", argv[0]);
             return 1;
         }
 
         if(count == 3){
-            entree = stdin;
-            sortie = stdout;
+
             if(strcmp(argv[1], "-c") == 0 && strlen(argv[2]) != 12){
                 return 2;
-            }else if(entree == NULL){
-                return 5;
-            }else if(sortie == NULL){
-                return 6;
             }
         }
   
@@ -32,16 +41,15 @@ int main(int argc, char** argv) {
             if(strcmp(argv[3], "-i") != 0 && strcmp(argv[3], "-o") != 0){
                 return 3;
             }else if(strcmp(argv[3], "-i") == 0 ){
-                entree = fopen(argv[4], "r");
+                entree = freopen(argv[4], "r", stdin);
                 if(entree == NULL)
                     return  5;
             }else if(strcmp(argv[3], "-o") == 0){
-                sortie = fopen(argv[4], "w");
+                sortie = freopen(argv[4], "w", stdout);
                 if(sortie == NULL)
                     return 6;
             }
-            return 0;
-        }
+         }
 
 	if(count == 7){
             if((strcmp(argv[3], "-i") != 0 && strcmp(argv[3], "-o") != 0) || (strcmp(argv[5], "-i") != 0 && strcmp(argv[5], "-o") != 0)){
@@ -54,7 +62,7 @@ int main(int argc, char** argv) {
                 }else if(sortie == NULL){
                     return 6;
                 }
-            }else if(strcmp(argv[3], "-o") == 0 && strcmp(argv[5], "-i") == 0){
+             }else if(strcmp(argv[3], "-o") == 0 && strcmp(argv[5], "-i") == 0){
                 sortie = freopen(argv[4], "w", stdout);
                 entree = freopen(argv[6], "r", stdin);
                 if(entree == NULL){
@@ -64,20 +72,21 @@ int main(int argc, char** argv) {
                 }
             }
 	}
-
-        code = fopen("code.txt", "w");
-        fprintf(code, "%s\n", argv[2]);
-        fclose(code);
-
     }
 
+    // Créer un fichier code.txt qui contient le code permanent qui est passé par l'argument -c
+    code = fopen("code.txt", "w");
+    fprintf(code, "%s\n", argv[2]);
+    fclose(code);
+
+    // Validation des intervalles dans le fichier entrée 
     scanf("%d", &tete);
     scanf("%d", &tail);
-
     if(tete <= 0 || tail <= 0){
        return 4;
     }
 
+    // Déterminer le nombre minimal et maximal
     if(tete > tail){
         max = tete;
         min = tail;
@@ -87,6 +96,7 @@ int main(int argc, char** argv) {
     }
     fclose(entree);
 
+    // Calculer les nombres parfaits entre les intervalles
     for(i=min; i<=max; i++){
         sum=0;
         for(j=1; j<i; j++){
@@ -98,7 +108,6 @@ int main(int argc, char** argv) {
             printf("%d\n", i);
         }
     }
-
-
     return 0;
 } 
+
