@@ -25,18 +25,15 @@ int main(int argc, char** argv) {
         }else if(sortie == NULL){
             return 6;
         }
-        if(count <= 2 || count == 4 || count == 6 || strcmp(argv[1], "-c") != 0){
+        if(count < 2 || count == 4 || count == 6 || strcmp(argv[1], "-c") != 0){
             fprintf(stderr, "La ligne de commande doit être sous la forme suivante: %s <-c CODEpermanent> [-i fichier.in] [-o fichier.out] \n", argv[0]);
             return 1;
         }
 
-        if(count == 3){
-
-            if(strcmp(argv[1], "-c") == 0 && strlen(argv[2]) != 12){
-                return 2;
-            }
+        if(strcmp(argv[1], "-c") == 0 && (count == 2 || strlen(argv[2]) != 12)){
+            return 2;
         }
-  
+
         if(count == 5){ 
             if(strcmp(argv[3], "-i") != 0 && strcmp(argv[3], "-o") != 0){
                 return 3;
@@ -80,9 +77,9 @@ int main(int argc, char** argv) {
     fclose(code);
 
     // Validation des intervalles dans le fichier entrée 
-    scanf("%d", &tete);
-    scanf("%d", &tail);
-    if(tete <= 0 || tail <= 0){
+    int a = scanf("%d", &tete);
+    int b = scanf("%d", &tail);
+    if(a != 1 || b != 1 || tete < 0 || tail < 0 ){
        return 4;
     }
 

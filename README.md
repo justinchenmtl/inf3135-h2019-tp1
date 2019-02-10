@@ -20,9 +20,9 @@ Jian Chen (CHEJ19087301)
 
 ## Fonctionnement
 
-Ce projet permet d'exécuter un `C` programme à partir de la ligne de commande pour trouver le nombre parfait et vérifier les arguments de la ligne de commande.  Il gère également automatiquement les données et les fichiers via `C`.
+Ce projet permet d'exécuter un `C` programme à partir de la ligne de commande pour trouver le nombre parfait et valider les arguments de la ligne de commande.  Il gère également automatiquement les données et les fichiers via `C`.
 - Si on lance une commande `./tp1 -c CODE_permanent -i entree.txt -o sortie.txt`, le programme générera automatiquement un fichier `code.txt` contenant le Code Permanent passé par le paramètre `-c` et le fichier `sortie.txt`, qui contient tous les nombres parfaits trouvés en lisant le fichier d'entrée `entree.txt`.
-- Si on exécute la commande `make clean` dans shell, tous les fichiers d'objet `*.o` et le fichier exécutable `tp1` doivent être enlevés.
+- Si on exécute la commande `make clean` dans shell, tous les fichiers d'objet `*.o`, `code.txt` et le fichier exécutable `tp1` doivent être enlevés.
 
 ## Contenu du projet
 
@@ -36,7 +36,7 @@ Ce projet contient principalement les fichiers suivants:
 
 ## Références
 
-Tous les travaux de mon projet sont basés sur les matériaux et les cours suivants, et je remercie pour leurs contributions.
+Tous les travaux de ce projet sont basés sur les matériaux et les liens suivants, et je remercie pour leurs contributions.
 - [C Programming Language Tutorial - Abhishek Ahlawat](https://www.studytonight.com/c/ "C")
 - [The C Programming Language (Second Edition) - Brian W.Kernighan](https://archive.org/details/CProgrammingLanguage2ndEditionByBrianW.KernighanDennisM.Ritchie/page/n191)
 - [Programming in C (UNIX System Calls and Subroutines using C) - A. D. Marshall](https://users.cs.cf.ac.uk/Dave.Marshall/C/CE.html)
