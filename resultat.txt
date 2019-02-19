@@ -12,17 +12,19 @@ make resultat        : 1pts
 README.md            : 2pts
 compilation          : 2pts
 code.txt             : 1pts
-test 1               : 0pts
-resultat 1           : 0pts
 c.retour 1           : 1pts
 c.retour 2           : 1pts
 c.retour 3           : 0pts
 c.retour 4           : 1pts
 c.retour 5           : 1pts
 c.retour 6           : 1pts
-test 2               : 0pts
-resultat 2           : 0pts
+test 0 execution     : 1pts
+test 0 resultat      : 1pts
+test 1 exe           : 0pts
+test 1 resultat      : 0pts
+test 2 exe           : 0pts
+test 2 resultat      : 0pts
 Qualite              : 0pts
 Qualite              : 0pts
 ------------------------------------------------------
-resultat tp1 : 18pts/30 | jours de retard : 0
+resultat tp1 : 20pts/30 | jours de retard : 0
