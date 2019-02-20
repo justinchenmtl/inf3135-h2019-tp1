@@ -20,11 +20,11 @@ c.retour 5           : 1pts
 c.retour 6           : 1pts
 test 0 execution     : 1pts
 test 0 resultat      : 1pts
-test 1 exe           : 0pts
-test 1 resultat      : 0pts
+test 1 exe           : 1pts
+test 1 resultat      : 1pts
 test 2 exe           : 0pts
 test 2 resultat      : 0pts
 Qualite              : 0pts
 Qualite              : 0pts
 ------------------------------------------------------
-resultat tp1 : 20pts/30 | jours de retard : 0
+resultat tp1 : 22pts/30 | jours de retard : 0
